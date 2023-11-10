@@ -1,0 +1,523 @@
+body {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+/* Estilos para el contenedor del header */
+header {
+  width: 100%;
+  height: 973px;
+  z-index: -2;
+  justify-content: space-between;
+  align-items: flex-start; 
+  background: url(../imagenes/producto_plato.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/* capa */
+.filter-hider {
+  position: static;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(107.32deg, rgba(0, 0, 0, 0.7) 0.46%, rgba(32, 45, 57, 0.7) 50.53%, rgba(45, 123, 114, 0.7) 99.6%);
+  z-index: -1;
+}
+.contenedor-menu {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+
+/* Estilos para el contenedor del logo */
+.logo {
+  margin-top: 20px; 
+  padding: 10px;
+}
+
+/* Estilos para la imagen del logo */
+.logo img {
+  max-width: 150px; 
+  height: auto;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: #e8a58e;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  overflow-y: auto;
+}
+
+.close-button {
+  text-align: right;
+  padding: 10px 15px;
+}
+
+.close-button i {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu.menu-open {
+  transform: translateX(0); 
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Estilos para los iconos */
+.icons {
+  display: flex; 
+  align-items: center; 
+  margin-top: 60px; 
+  margin-right: 20px;
+}
+
+.icons a {
+  text-decoration: none;
+  color: #e8a58e;
+  font-size: 24px;
+  margin-right: 40px;
+}
+
+/*Estilos de división de información (título, descripción, entre otros)*/
+.general_info {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  width: 500px;
+  height: 480px;
+}
+.general_info h1 {
+  font-weight: 500;
+  color: #e8a58e;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+.general_info h2 {
+  font-weight: 500;
+  color: #e8a58e;
+  font-size: 35px;
+}
+.general_info p {
+  text-align: justify;
+  font-weight: 300;
+  padding: 18px 0px;
+  color: #fff;
+  word-spacing: 8px;
+  line-height: 25px;
+  opacity: 0.8;
+  font-size: 16px;
+}
+.general_info .btn_contactar {
+  width: 160px;
+  height: 55px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  border-style: none;
+  margin: 10px auto; 
+  display: block; 
+  background-color: #e8a58e;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.general_info .btn_contactar:hover {
+  box-shadow: 0px 0px 28px 0px rgba(249, 249, 249, 0.75);
+  transition: all 1s;
+}
+.general_info .btn_contactar {
+  color: #fff;
+  background-color: #e8a58e;
+}
+
+/*Estructura de Secciones*/
+.structure_one {
+  margin: 0px 10%;
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin-top: 30px;
+}
+.structure_one .info_section,
+.structure_one .illustration_section {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+.structure_one .illustration_section {
+  text-align: center;
+  margin-top: 170px;
+}
+.info_section,
+.illustration_section img {
+  width: 70%;
+  height: auto;
+}
+.illustration_section .marca_agua {
+  width: 40%;
+  position: relative;
+  margin-left: 50%;
+  height: auto;
+  z-index: -99;
+  margin-top: -80px;
+}
+.info_section .title {
+  width: 100%;
+  height: auto;
+}
+.info_section .title h3 {
+  font-size: 40px;
+  color: #0d424a;
+}
+.info_section p {
+  text-align: justify;
+  font-size: 18px;
+  word-spacing: 8px;
+  line-height: 25px;
+  color: #606060;
+  margin-bottom: 50px;
+}
+
+section.structure_one video {
+  width: 42%; 
+  height: auto; 
+  margin: 0 20px;
+  padding: 50px;
+}
+
+/* Estilos para la sección de catálogo de productos */
+.product-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-items: stretch;
+  padding: 20px; 
+  background-color: #f2f2f2; 
+  text-align: center; 
+}
+
+/* Estilos para el título del catálogo de productos */
+.catalog-title {
+  font-size: 40px; 
+  text-align: center; 
+  margin-top: 100px;
+  color: #0d424a;
+}
+
+/* Estilos para cada producto individual */
+.product {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  background-color: #fff; 
+  padding: 20px; 
+}
+
+.product img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.product h3 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #0d424a;
+}
+
+.product p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #606060;
+}
+
+.product p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+  font-family: "Courgette", cursive;
+}
+
+/* Estilos para el botón "Ver detalles" */
+.product .cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e8a58e; 
+  color: #fff; 
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.product .cta-button:hover {
+  background-color: #f2a187; 
+  color: #ffffff;
+}
+
+/*Seccion Garantia */
+.guarantee {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+.guarantee-item {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e8a58e;
+  border-radius: 10px;
+}
+
+.guarantee-item i {
+  font-size: 48px;
+  color: #e8a58e;
+  margin-bottom: 10px;
+}
+
+.guarantee-item h3 {
+  font-size: 24px;
+  color: #2d7b72;
+}
+
+.guarantee-item p {
+  font-size: 16px;
+  color: #606060;
+  margin-top: 10px;
+}
+
+
+/*Footer */
+footer {
+  background: #0d424a;
+  padding-bottom: 0.1px;
+}
+
+.footer-logo img {
+  max-width: 100px; 
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.contenedor {
+  width: 90%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+  padding: 60px 0;
+}
+
+.contact-us {
+  width: 50%;
+  color: #fff;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 35px;
+  color: #fff;
+}
+
+.brand+p {
+  font-weight: 500;
+}
+
+.contact-us {
+  width: 50%;
+  color: #fff;
+}
+
+.footer-icons {
+  font-size: 24px; 
+  padding-top: 50px;
+}
+
+.footer-icons a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px; 
+}
+
+/* Media query para tablet */
+@media (max-width: 768px) {
+  header {
+    height: 815px;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  .menu {
+    width: 200px;
+  }
+
+  .icons {
+    margin-top: 70px;
+  }
+
+  .general_info {
+    top: 180px;
+    width: 85%;
+    left: 7.5%;
+  }
+
+  .general_info h1 {
+    font-size: 30px; 
+  }
+
+  .general_info h2 {
+    font-size: 25px; 
+  }
+.general_info p {
+  font-size: 15px;
+  }
+
+.general_info .btn_contactar {
+  font-size: 15px; 
+  width: 110px; 
+  height: 40px;
+  }
+
+
+/*Estructura de secciones*/
+.structure_one {
+  flex-direction: column-reverse; 
+}
+
+.structure_one .illustration_section {
+  margin-top: 10px;
+}
+
+.structure_one .info_section, .structure_one .illustration_section {
+  margin-top: 10px;
+}
+
+.info_section,
+.illustration_section {
+  width: 100%;
+}
+
+.info_section .title h3 {
+  font-size: 28px; 
+}
+
+.info_section p {
+  font-size: 16px; 
+}
+
+/*SECCION DE catalogo de productos*/
+.product-catalog {
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+/*SECCION DE garantizado*/
+.guarantee {
+  flex-direction: column; 
+  padding: 10px; 
+}
+
+.guarantee-item {
+  width: 90%; 
+  margin: 10px auto; 
+}
+
+/*SECCION DE nuestro origen*/
+section.structure_one video {
+  width: 80%;
+  }
+
+  .footer-icons {
+    padding-top: 30px;
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 480px) {
+  .structure_one {
+    flex-direction: column;
+  }
+
+  .structure_one .illustration_section {
+    margin-top: 10px;
+  }
+
+  .structure_one .info_section,
+  .structure_one .illustration_section {
+    margin-top: 10px;
+  }
+
+  /* Estilos específicos para la sección "Nuestro Origen" en dispositivos móviles */
+  #origenes .info_section {
+    text-align: center; 
+    padding: 20px; 
+  }
+
+  #origenes .info_section h3 {
+    font-size: 28px; 
+  }
+
+  #origenes .info_section p {
+    font-size: 16px; 
+  }
+
+  #origenes video {
+    width: 80%; 
+    margin: 10px auto; 
+  }
+
+  /* Estilos para la sección de catálogo de productos */
+.product-catalog {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #f2f2f2; 
+  text-align: center; 
+}
+
+/* Estilos para cada producto individual */
+.product {
+  width: 70%; 
+  margin: 20px 0; 
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  background-color: #fff; 
+  padding: 20px; 
+}
+}
+
