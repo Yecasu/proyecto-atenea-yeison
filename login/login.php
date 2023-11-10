@@ -40,7 +40,7 @@
             <label>Contraseña</label>
             <input type="password" name="password" required />
         </div>
-        <button type="submit" name="login" value="login"><a href="../home.html" class="button">Ingresar</a></button>
+        <button type="submit" name="login" value="login">Ingresar</button>
         <br>
         <a href="register.php" class="button">Registrarme</a>
     </form>
